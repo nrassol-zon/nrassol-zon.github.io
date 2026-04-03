@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Toronto Trails</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Toronto Trails</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+		:root {
+            --font-main: Arial, Helvetica, sans-serif;
+            --text-title: 2.5rem;
+            --text-h2: 1.75rem;
+            --text-h3: 1.15rem;
+            --text-body: 1rem;
+            --text-caption: 1.2rem;
+        }
+
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        h1, h2, h3, p, figcaption, a {
+            font-family: var(--font-main);
+        }
+
+        h1 {
+            font-size: var(--text-title);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: var(--text-h2);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: var(--text-h3);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: var(--text-body);
+        }
+
+        .navbar {
+            padding: 12px 24px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #222;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background-color: #f5f5f5;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .gallery-item {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        .gallery-item h3 {
+            margin: 14px 0 8px;
+        }
+
+        .gallery-item figcaption {
+            text-align: center;
+            font-size: var(--text-caption);
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .disclaimer-banner {
+            border: 3px solid #dc3545;
+            border-radius: 8px;
+            margin: 12px auto;
+            max-width: 1200px;
+            background-color: #fff8f8;
+        }
+
+        .disclaimer-content {
+            padding: 16px 20px;
+        }
+
+        .disclaimer-content h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            margin-top: 40px;
+        }
+
+        .footer p,
+        .footer figcaption {
+            margin: 6px 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                max-width: 100%;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+<body>
+    <!-- Disclaimer Banner -->
+    <div class="disclaimer-banner">
+        <div class="disclaimer-content">
+            <h2>⚠️ Leave No Trace - Use At Your Own  Discretion</h2>
+            <p>These trails are natural spaces. Please respect the environment by leaving no trace, using your best judgment regarding weather conditions and your skill level.</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Connect To Toronto Trails</h1>
+            <ul class="nav-menu">
+                <li><a href="#gallery">Map Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Trails Located in Toronto</h1>
+            <p>Ours to Discover</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Map Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2>Map Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+				<h3>Map 1</h3>
+                    <img src="images/map-1.png" alt="Map 1">
+					<figcaption>The map above is a DEM (Digital Elevation Model) which idicates which areas around Toronto have a higher elevation than others. This is helpful when deciding how steep of a hill you are willing to hike or bike at.</figcaption>
+                </div>
+                <div class="gallery-item">
+				<h3>Map 2</h3>
+                    <img src="images/map-2.png" alt="Map 2">
+					<figcaption>This map shows where the ravines are around Toronto. Approximately 17% of Toronto is covered in these ravines which is over 11,000 hectares or more than 300 kilometers! When exploring these lands it's important to be consious of the footprint you leave behind.</figcaption>
+                </div>
+                <div class="gallery-item">
+				<h3>Map 3</h3>
+                    <img src="images/map-3.png" alt="Map 3">
+					<figcaption>This map highlights the different path made and maintained by the City of Toronto. In the legend the trails are colour coded for each activity that is allowed. The bike icons indicate the bike trail entrances that are spread out around the city.</figcaption>
+                </div>
+                <div class="gallery-item">
+				<h3>Map 4</h3>
+                    <img src="images/map-4.png" alt="Map 4">
+					<figcaption>Finding public bathrooms is always a concern especially when frequently spending time outdoors. Luckly the City of Toronto have public bathrooms all around the city!</figcaption>
+                </div>
+                <div class="gallery-item">
+				<h3>Map 5</h3>
+                    <img src="images/map-5.png" alt="Map 5">
+					<figcaption> Just like the previous map, finding parking in the city is another big concern. Which is solved on this map with public parking lots being shown in pink.</figcaption>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Trail Maps | Toronto Metropolitan University | All rights reserved to Nur Rassol. | Remember: Leave No Trace</p>
+		<figcaption>Most data was sourced from City of Toronto's OpenData source.</figcaption>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
